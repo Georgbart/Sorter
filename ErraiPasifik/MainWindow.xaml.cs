@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Threading;
 
 namespace ErraiPasifik
 {
@@ -41,6 +42,16 @@ namespace ErraiPasifik
             splittedString = TextboxInput.Text.Trim().Split(',');
             nums = Array.ConvertAll(splittedString, int.Parse);
             //Quick Sort
+            //Thread t0 = new Thread(() => QuickSort_Thread(nums));
+            //Thread t1 = new Thread(() => BubleSort_Thread(nums));
+            //Thread t2 = new Thread(() => MergeSort_Thread(nums));
+            //Thread t3 = new Thread(() => GCFBubleSort_Thread(nums));
+
+            //t0.Start();
+            //t1.Start();
+            //t2.Start();
+            //t0.Start();
+
             QuickSort_Thread(nums);
             BubleSort_Thread(nums);
             MergeSort_Thread(nums);
